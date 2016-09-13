@@ -1,43 +1,78 @@
 @-moz-document url-prefix("http://e-shuushuu.net/") {
 /*
 E-shuushuu Default Dark
-rev20160909
+rev20160913
 */
 
 /*[[tranf]]*/
 
 /*[[shuu-bnr]]*/
 
+/*Elements Shadow*/
+#head,
+#donations .graph,
+#sorting_controls,
+#masstags_form input.text,
+#footer,
+.thumb img,
+.post .avatar img,
+.display,
+.pagination .next,
+.pagination .prev,
+.pagination .first,
+.pagination li,
+input.button,
+div#app img,
+div.search_suggest_div,
+div.search_suggest_div ul,
+div.tooltip,
+form.norm, table,
+input.text,
+select,
+textarea,
+ul.notice
+{
+box-shadow: 1px 1px 4px /*[[elmsh]]*/
+}
+
 /*Border Color*/
-header, #head, #sorting_controls, #footer,
-.display, .notice, form.norm, input.text,
+header,
+#head,
+#sorting_controls,
+#footer,
+.display,
+.notice,
+form.norm,
+input.text,
 div.search_suggest_div ul
 {
-	border: 1px /*[[bds]]*//*[[border]]*/!important;
-	border-bottom: 1px /*[[bds]]*//*[[border]]*/!important;
+border: 1px /*[[bds]]*//*[[border]]*/!important;
+border-bottom: 1px /*[[bds]]*//*[[border]]*/!important;
 }
+
 #top_info, #banner
 {
 border-bottom: 1px /*[[bds]]*//*[[border]]*/!important;
 }
+
+#donations .graph,
 select, textarea,
 input.button,
-.thumbview .display,
-input.button,
-/*Buttons*/
-.pagination .next, .pagination .first, .pagination .prev,
-/*wiki*/
 fieldset,
 div.noarticletext,
+table.narrow,
+table,
+.thumbview .display,
+.pagination .next,
+.pagination .first,
+.pagination .prev,
 .post blockquote,
 .post .spoiler,
-table.narrow,
-#donations .graph,
-table,
 .pagination li
 {
-	border: 1px /*[[bds]]*//*[[border]]*/!important;
+border: 1px /*[[bds]]*//*[[border]]*/!important;
 }
+
 .tablebg
 {
 background-color:/*[[csc]]*/!important;
@@ -45,18 +80,17 @@ background-color:/*[[csc]]*/!important;
 
 .post_foot
 {
-	border-top:2px /*[[bds]]*//*[[border]]*/!important;
+border-top:2px /*[[bds]]*//*[[border]]*/!important;
 }
 .post .meta
 {
-	border-top:1px dashed /*[[border]]*/!important;
+border-top:1px dashed /*[[border]]*/!important;
 }
-
 .post .avatar
 {
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	background: transparent;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+background: transparent;
 }
 .spoiler
 {
@@ -64,7 +98,7 @@ background: rgba(128, 128, 128, 0.5)!important;
 }
 .alert
 {
-	background :rgba(0,128,128,0.5)!important;
+background :rgba(0,128,128,0.5)!important;
 }
 tbody tr
 {
@@ -72,93 +106,95 @@ background: rgba(92,92,92,0.5);
 }
 select
 {
-	background: /*[[select]]*/!important;
+background: /*[[select]]*/!important;
 }
 
 
 /*Plain Text*/
+p,
 body,
 div.tooltip,
 div#content,
-p,
 input.text,
-.post .spoiler.show dd,
 select,
-textarea
+textarea,
+.post .spoiler.show dd
 {
 color: /*[[csa]]*/!important;
-text-shadow: 1px 1px 4px black;
+text-shadow: 1px 1px 4px /*[[txtsh]]*/ ;
 }
 
 /*Hyperlink Text*/
 a:link,
 a:visited,
 h1,
-span.reg_user,
 div.search_suggest_div ul,
 input.button
 {
 color: /*[[textcolor]]*/ ;
-text-shadow: 1px 1px 4px black;
+text-shadow: 1px 1px 4px /*[[txtsh]]*/ ;
 }
 
 /*Elements color*/
 #head,
-.display,
-form.norm,
-.image_block .meta,
-dl.spoiler.hide,
-.pagination li,
 #sorting_controls,
-#footer,.notice,
-input.button,
-#donations .graph
-
+#footer,
+#donations .graph,
+.display,
+.image_block .meta,
+.pagination li,
+form.norm,
+dl.spoiler.hide,
+.notice,
+input.button
 {
-	background: /*[[csc]]*/!important;
+background: /*[[csc]]*/!important;
 }
 p
 {
-	background-color:transparent!important;
+background-color:transparent!important;
 }
 
 /*Title bar, form color*/
+#sidebar .display h2,
+h3,
+form.norm h2,
+form.norm h3,
+input.text,
+tfoot,
+tfoot, thead,
 .display h2,
 .display h3,
 .title,
-form.norm h2,
-form.norm h3,
-h3,
-input.text,
-tfoot,
-.post blockquote,
-#sidebar .display h2,
-tfoot, thead
+.post blockquote
 {
-	background: /*[[csb]]*/!important;
+background: /*[[csb]]*/!important;
 }
-  
-.display .title h2, .display .title h3,
-.post .content, .post blockquote, .post .spoiler, .post_foot,
+
+.odd,
+.display .title h2,
+.display .title h3,
+.post .content,
+.post blockquote,
+.post .spoiler,
+.post_foot,
 .image_block .meta,
 form.norm ul,
-textarea, form.norm input, #masstags_form input.text
+textarea,
+form.norm input,
+#masstags_form input.text
 {
-	background:none!important;
+background:none!important;
 }
 
 .display dl
 {
-	border-left: 10em solid transparent;
+border-left: 10em solid transparent;
 }
 
-.odd,#content,p.meta,body
-{
-	background: transparent !important;
-}
 .thumbview .display
 {
-	border-width: 0 0 0 1px;
+border-width: 0 0 0 1px;
 }
 
 div.search_suggest_div,
@@ -166,24 +202,24 @@ div.search_suggest_div ul,
 div.search_suggest_div li.close,
 div.tooltip
 {
-	background:/*[[menucolor]]*/!important;
+background:/*[[menucolor]]*/!important;
 }
 
 a.admin,
 span.admin{
-	color:/*[[admin]]*/!important;
+color:/*[[admin]]*/!important;
 }
 a.tagger,
 span.tagger{
-	color:/*[[tagger]]*/!important;
+color:/*[[tagger]]*/!important;
 }
 a.moderator,
 span.moderator{
-	color:/*[[mod]]*/!important;
+color:/*[[mod]]*/!important;
 }
 a.reg_user
 {
-	color:/*[[reg_user]]*/!important;
+color:/*[[reg_user]]*/!important;
 }
 
 /*[[effect]]*/
@@ -196,11 +232,20 @@ a.reg_user
 html{
 	background:black
 }
+/*This prevent custom backgroumd image interfering with images*/
 }
 
 @-moz-document url-prefix("http://e-shuushuu.net/forums/") {
 
 /*[[remv]]*/
+
+table,img{
+box-shadow: none
+}
+
+.tablebg, .post, input.btnlite{
+box-shadow: 1px 1px 4px /*[[elmsh]]*/
+}
 
 table,
 tbody tr
@@ -217,7 +262,13 @@ background:none!important;
 background: /*[[csc]]*/ !important
 }
 
-.row1,.row2,.spacer,.helpline,.btnbbcode,.btnmain,.btnfile
+.row1,
+.row2,
+.spacer,
+.helpline,
+.btnbbcode,
+.btnmain,
+.btnfile
 {
 background-color:transparent!important
 }
@@ -228,34 +279,51 @@ background: /*[[csb]]*/!important;
 color:/*[[csa]]*/!important
 }
   
-.quotecontent,.quotetitle
+.quotecontent,
+.quotetitle
 {
 border-color: /*[[border]]*/
 }
  
 b,
+p.moderators,
 .postauthor,
 .nav,
 .copyright,
-p.moderators,
 .postdetails,
-span.username-coloured,
 .post,
 .helpline,
-.btnbbcode
+.btnbbcode,
+span.username-coloured
 {	
-	color: /*[[csa]]*/!important
+color: /*[[csa]]*/!important
 }
-.tablebg,.row1,.row2,.indentmenu ul li a,th,
-#wrapper, .indentmenu ul,input
+#wrapper,
+.tablebg,
+.row1,
+.row2,
+.indentmenu ul li a,
+.indentmenu ul,
+th,
+input
 {
 border: 1px /*[[bds]]*/ /*[[border]]*/ !important
 }
-th,.btnlite,.btnmain,.btnfile,.indentmenu ul li a
+th,
+.btnlite,
+.btnmain,
+.btnfile,
+.indentmenu ul li a
 {
 color: /*[[textcolor]]*/ !important
 }
-table{border:none!important}
+table
+{
+border:none!important
+}
+.btnmain,input.btnlite {
+text-shadow: 1px 1px 4px /*[[txtsh]]*/ ;
+}
 }
 
 @-moz-document url-prefix("http://e-shuushuu.net/wiki/") {
@@ -263,23 +331,28 @@ table{border:none!important}
 
 /*[[wiki-img]]*/
 
-#gumax-nav li.hover a, #gumax-nav ul li a {
-	background-color: /*[[textcolor]]*/ ;
-	border-bottom: 1px /*[[bds]]*/ /*[[border]]*/ ;
-}
-
-#gumax-nav a.hover, #gumax-nav ul a.hover {
-	background-color:rgba(64, 64, 64, 0.8)
-}
-
-.wikitable th, .wikitable td,
-.tablebg, table,
-#pagehistory li,
-.catlinks,
-fieldset#mw-searchoptions,
-.mw-search-formheader
+#gumax-nav li.hover a,
+#gumax-nav ul li a
 {
-	border: 1px /*[[bds]]*/ /*[[border]]*/ !important
+background-color: /*[[textcolor]]*/ ;
+border-bottom: 1px /*[[bds]]*/ /*[[border]]*/ ;
+}
+#gumax-nav a.hover,
+#gumax-nav ul a.hover
+{
+background-color:rgba(64, 64, 64, 0.8)
+}
+
+#pagehistory li,
+.wikitable th,
+.wikitable td,
+.tablebg,
+.catlinks,
+.mw-search-formheader,
+table,
+fieldset#mw-searchoptions
+{
+border: 1px /*[[bds]]*/ /*[[border]]*/ !important
 }
 div.mw-warning-with-logexcerpt
 {
@@ -287,17 +360,20 @@ border:2px /*[[bds]]*/ /*[[border]]*/!important
 }
 
 #gumax-page,
+#gumax-special-tools ul li a,
+#gumax-credit-list ul li a,
+#contentSub, #contentSub2,
+#footer,
+#gumax-nav,
+#pagehistory li,
+#gumax-footer,
 textarea,
 div.tooltip,
-#footer,
 div#content,
 td.gumax-content-td-center,
 td.gumax-content-td-topleft,
 td.gumax-content-td-topright,
-#gumax-footer,
 li.selected a,
-#gumax-nav,
-#pagehistory li,
 div.noarticletext,
 td,
 form,
@@ -306,13 +382,10 @@ li,
 label,
 textarea#wpTextbox1,
 h4,
-#gumax-special-tools ul li a,
-#gumax-credit-list ul li a,
-#contentSub, #contentSub2,
 input
 {
-	background: transparent !important;
-	color: /*[[csa]]*/ !important;
+background: transparent !important;
+color: /*[[csa]]*/ !important;
 }
 
 .catlinks,
@@ -321,7 +394,7 @@ input
 .minor,
 .bot
 {
-	color: /*[[csa]]*/ !important;
+color: /*[[csa]]*/ !important;
 }
 
 h1,
@@ -333,78 +406,88 @@ a,
 a.external,
 #preftoc a,
 #gumax-p-login ul li a,
+#gumax-content-actions ul li a,
 .mw-search-formheader div.search-types ul li.current a,
-#gumax-content-actions ul li a
+.gumax-firstHeading
 {
-    color:/*[[textcolor]]*/
+color:/*[[textcolor]]*/
 }
 
+
+h2,
+h3,
+tbody tr,
+fieldset#mw-searchoptions,
 #preferences,
 #toc,
-h2,h3,
-.mw-search-formheader,
 #gumax-content-actions ul li.selected a,
 #gumax-content-actions ul li a,
-tbody tr,
+.mw-search-formheader,
 .catlinks,
-.prefsection legend,
-fieldset#mw-searchoptions
+.prefsection legend
 {
-    background:none!important
+background:none!important
 }
 .wikitable th,
 table
 {
 background: /*[[csc]]*/ !important;
 }
-.mw-search-formheader div.search-types ul li.current a,
-.gumax-firstHeading
-{
-	color:/*[[textcolor]]*/ !important
-}
 
-#gumax-nav a
+#gumax-nav a,
+#gumax-p-search form #searchGoButton,
+#gumax-p-search form #mw-searchButton,
+#gumax-p-search form #searchInput
 {
-text-shadow: 1px 1px 4px black;
+text-shadow: 1px 1px 4px /*[[txtsh]]*/ ;
+color: /*[[csa]]*/
+}
+#gumax-p-search form #searchInput,
+#gumax-p-search form #searchGoButton,
+#gumax-p-search form #mw-searchButton
+{
+box-shadow: 1px 1px 4px /*[[elmsh]]*/
 }
 
 #content
 {
-    border: none;
-    border-top: 1px /*[[bds]]*/ /*[[border]]*/;
-    border-bottom: 1px /*[[bds]]*/ /*[[border]]*/;
+border: none;
+border-top: 1px /*[[bds]]*/ /*[[border]]*/;
+border-bottom: 1px /*[[bds]]*/ /*[[border]]*/;
 }
 
+/*Restoore the Origina text Color Scheme from Shuu Default CSS*/
 a:visited {
-	color: #bd96ff;
+color: #bd96ff;
 }
 a:active {
-	color: #faa700;
+color: #faa700;
 }
 a:hover {
-	text-decoration: underline;
+text-decoration: underline;
 }
 a.stub {
-	color: #772233;
+color: #772233;
 }
 a.new, #p-personal a.new {
-	color: #ba0000;
+color: #ba0000;
 }
 a.new:visited, #p-personal a.new:visited {
-	color: #a55858;
+color: #a55858;
 }
 .mw-plusminus-pos {
-	color: #00bf00;
+color: #00bf00;
 }
   
 }
+
 @-moz-document url-prefix("https://qchat.rizon.net/") {
-.qwebirc-qui .lines,
-.topic,
 div.tabbar,
 div,
 a.tab.tab-unselected,
 a.tab.tab-selected,
+.qwebirc-qui .lines,
+.topic,
 .qwebirc-qui .topic,
 .qwebirc-qui .nicklist,
 .qwebirc-qui .nicklist a,
@@ -412,11 +495,9 @@ a.tab.tab-selected,
 {
 background: /*[[csc]]*/ !important;
 color: /*[[csa]]*/ !important;
-text-shadow: 1px 1px 4px black;
+text-shadow: 1px 1px 4px /*[[txtsh]]*/ ;
 }
 
-span.Xc7 a
-{
-color: /*[[textcolor]]*/ !important;
-}
+span.Xc7 a {color: /*[[textcolor]]*/ !important;}
+
 }
