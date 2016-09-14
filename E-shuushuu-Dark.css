@@ -1,7 +1,7 @@
 @-moz-document url-prefix("http://e-shuushuu.net/") {
 /*
 E-shuushuu Default Dark
-rev20160914
+rev20160915
 */
 
 /*[[tranf]]*/
@@ -71,11 +71,6 @@ table,
 .pagination li
 {
 border: 1px /*[[bds]]*//*[[border]]*/!important;
-}
-
-.tablebg
-{
-background-color:/*[[csc]]*/!important;
 }
 
 .post_foot
@@ -243,49 +238,53 @@ html{background:black}
 
 /*[[remv]]*/
 
-table,img{
+table,
+img
+{
 box-shadow: none
 }
 
-.tablebg, .post, input.btnlite{
+/*Buttons/Boxes Shadow*/
+.tablebg,
+.post,
+.btnbbcode,
+.helpline,
+.btnmain,
+input.btnlite
+{
 box-shadow: 1px 1px 4px /*[[elmsh]]*/
 }
 
-table,
-tbody tr
-tbody,tr,th,
-td.row3,
-.catdiv,.cat,
-.post,.btnlite
-{
-background:none!important;
-}
-.tablebg,
-.indentmenu ul
-{
-background: /*[[csc]]*/ !important
-}
-
+th,
+tr,
+.catdiv,
+.cat,
+.btnlite,
 .row1,
 .row2,
+.row3,
 .spacer,
 .helpline,
 .btnbbcode,
 .btnmain,
 .btnfile
 {
-background-color:transparent!important
+background:  none !important
 }
+
+/*Background Color/transparency option on Forum*/
+.tablebg,
+.indentmenu ul,
+.post
+{
+background: /*[[csc]]*/ !important
+}
+
 .quotetitle,
 .quotecontent
 {
-background: /*[[csb]]*/!important;
-color:/*[[csa]]*/!important
-}
-  
-.quotecontent,
-.quotetitle
-{
+background: /*[[csb]]*/ !important;
+color: /*[[csa]]*/ !important;
 border-color: /*[[border]]*/
 }
  
@@ -325,7 +324,14 @@ table
 {
 border:none!important
 }
-.btnmain,input.btnlite {
+
+/*Text Shadow on Forum*/
+input.btnlite,
+.btnmain,
+.btnbbcode,
+.helpline,
+.post
+{
 text-shadow: 1px 1px 4px /*[[txtsh]]*/ ;
 }
 }
@@ -354,7 +360,10 @@ background-color:rgba(64, 64, 64, 0.8)
 .catlinks,
 .mw-search-formheader,
 table,
-fieldset#mw-searchoptions
+fieldset#mw-searchoptions,
+#gumax-p-search form #searchInput,
+#gumax-p-search form #searchGoButton,
+#gumax-p-search form #mw-searchButton
 {
 border: 1px /*[[bds]]*/ /*[[border]]*/ !important
 }
@@ -386,7 +395,8 @@ li,
 label,
 textarea#wpTextbox1,
 h4,
-input
+input,
+.errorbox
 {
 background: transparent !important;
 color: /*[[csa]]*/ !important;
@@ -417,7 +427,6 @@ a.external,
 color:/*[[textcolor]]*/
 }
 
-
 h2,
 h3,
 tbody tr,
@@ -432,8 +441,12 @@ fieldset#mw-searchoptions,
 {
 background:none!important
 }
+
 .wikitable th,
-table
+table,
+#gumax-p-search form #searchGoButton,
+#gumax-p-search form #searchInput,
+#gumax-p-search form #mw-searchButton
 {
 background: /*[[csc]]*/ !important;
 }
