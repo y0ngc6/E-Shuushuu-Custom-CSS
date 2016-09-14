@@ -1,7 +1,7 @@
 @-moz-document url-prefix("http://e-shuushuu.net/") {
 /*
 E-shuushuu Default Dark
-rev20160913
+rev20160914
 */
 
 /*[[tranf]]*/
@@ -141,18 +141,18 @@ text-shadow: 1px 1px 4px /*[[txtsh]]*/ ;
 #footer,
 #donations .graph,
 .display,
+.display h2,
+.display h3,
 .image_block .meta,
 .pagination li,
+.notice,
+form.norm h2,
+form.norm h3,
 form.norm,
 dl.spoiler.hide,
-.notice,
 input.button
 {
 background: /*[[csc]]*/!important;
-}
-p
-{
-background-color:transparent!important;
 }
 
 /*Title bar, form color*/
@@ -160,9 +160,8 @@ background-color:transparent!important;
 h3,
 form.norm h2,
 form.norm h3,
-input.text,
 tfoot,
-tfoot, thead,
+thead,
 .display h2,
 .display h3,
 .title,
@@ -171,18 +170,25 @@ tfoot, thead,
 background: /*[[csb]]*/!important;
 }
 
-.odd,
+/*Optional transparency*/
+.image_block .meta,
+.quick_reply textarea,
+#masstags_form input.text,
+input.text,
+textarea
+{
+background: /*[[readability]]*/ !important;
+}
+
+/*Elements' background below are disabled by default to achieve transparency effect*/
+p,
 .display .title h2,
 .display .title h3,
+.odd,
 .post .content,
 .post blockquote,
 .post .spoiler,
-.post_foot,
-.image_block .meta,
-form.norm ul,
-textarea,
-form.norm input,
-#masstags_form input.text
+.post_foot
 {
 background:none!important;
 }
@@ -229,9 +235,7 @@ color:/*[[reg_user]]*/!important;
 }
 
 @-moz-document url-prefix("http://e-shuushuu.net/images/") {
-html{
-	background:black
-}
+html{background:black}
 /*This prevent custom backgroumd image interfering with images*/
 }
 
