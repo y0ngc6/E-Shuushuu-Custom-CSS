@@ -1,18 +1,39 @@
 @-moz-document url-prefix("http://e-shuushuu.net/") {
 /*
 E-shuushuu Default Dark
-rev20160915
+rev20160928
 */
+/*[[font]]*/
+}
+@-moz-document url-prefix("http://e-shuushuu.net/") {
+html
+{
+background:url("/*[[bg]]*/");
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-position:center;
+background-size:cover;
+}
 
-/*[[tranf]]*/
+/*[[font]]*/
 
-/*[[shuu-bnr]]*/
+/*[[carbon]]*//*[[tranf]]*/
+/*[[shuu-bnr]]*//*[[effect]]*/ /*[[app]]*/
+
+#head,#sidebar,#content
+{
+opacity: /*[[opacity]]*/ !important
+}
 
 /*Elements Shadow*/
-#head,
 #donations .graph,
+select
+{
+box-shadow: 1px 1px 4px /*[[elmsh]]*/
+}
+
+#head,
 #sorting_controls,
-#masstags_form input.text,
 #footer,
 .thumb img,
 .post .avatar img,
@@ -23,16 +44,17 @@ rev20160915
 .pagination li,
 input.button,
 div#app img,
+div#content p img,
 div.search_suggest_div,
 div.search_suggest_div ul,
 div.tooltip,
-form.norm, table,
+form.norm,
+table,
 input.text,
-select,
 textarea,
-ul.notice
+.notice
 {
-box-shadow: 1px 1px 4px /*[[elmsh]]*/
+box-shadow: /*[[elmsht]]*/ /*[[elmsh]]*/
 }
 
 /*Border Color*/
@@ -46,17 +68,18 @@ form.norm,
 input.text,
 div.search_suggest_div ul
 {
-border: 1px /*[[bds]]*//*[[border]]*/!important;
-border-bottom: 1px /*[[bds]]*//*[[border]]*/!important;
+border: /*[[1px]]*/ /*[[bds]]*//*[[border]]*/!important;
+border-bottom: /*[[1px]]*/ /*[[bds]]*//*[[border]]*/!important;
 }
 
 #top_info, #banner
 {
-border-bottom: 1px /*[[bds]]*//*[[border]]*/!important;
+border-bottom: /*[[1px]]*/ /*[[bds]]*//*[[border]]*/!important;
 }
 
 #donations .graph,
-select, textarea,
+select,
+textarea,
 input.button,
 fieldset,
 div.noarticletext,
@@ -70,16 +93,16 @@ table,
 .post .spoiler,
 .pagination li
 {
-border: 1px /*[[bds]]*//*[[border]]*/!important;
+border: /*[[1px]]*/ /*[[bds]]*//*[[border]]*/!important;
 }
 
 .post_foot
 {
-border-top:2px /*[[bds]]*//*[[border]]*/!important;
+border-top: /*[[1px]]*/ /*[[bds]]*//*[[border]]*/!important;
 }
 .post .meta
 {
-border-top:1px dashed /*[[border]]*/!important;
+border-top: /*[[1px]]*/ dashed /*[[border]]*/!important;
 }
 .post .avatar
 {
@@ -109,14 +132,13 @@ background: /*[[select]]*/!important;
 p,
 body,
 div.tooltip,
-div#content,
 input.text,
 select,
 textarea,
 .post .spoiler.show dd
 {
 color: /*[[csa]]*/!important;
-text-shadow: 1px 1px 4px /*[[txtsh]]*/ ;
+text-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
 }
 
 /*Hyperlink Text*/
@@ -127,7 +149,7 @@ div.search_suggest_div ul,
 input.button
 {
 color: /*[[textcolor]]*/ ;
-text-shadow: 1px 1px 4px /*[[txtsh]]*/ ;
+text-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
 }
 
 /*Elements color*/
@@ -145,7 +167,9 @@ form.norm h2,
 form.norm h3,
 form.norm,
 dl.spoiler.hide,
-input.button
+input.button,
+div#content table,
+#masstags_form input.text
 {
 background: /*[[csc]]*/!important;
 }
@@ -165,10 +189,8 @@ thead,
 background: /*[[csb]]*/!important;
 }
 
-/*Optional transparency*/
+/*readability*/
 .image_block .meta,
-.quick_reply textarea,
-#masstags_form input.text,
 input.text,
 textarea
 {
@@ -181,9 +203,9 @@ p,
 .display .title h3,
 .odd,
 .post .content,
-.post blockquote,
 .post .spoiler,
-.post_foot
+.post_foot,
+#banner
 {
 background:none!important;
 }
@@ -222,14 +244,9 @@ a.reg_user
 {
 color:/*[[reg_user]]*/!important;
 }
-
-/*[[effect]]*/
-
-/*[[carbon]]*/
-
 }
 
-@-moz-document url-prefix("http://e-shuushuu.net/images/") {
+@-moz-document url-prefix("http://e-shuushuu.net/images/"), url-prefix("http://e-shuushuu.net/common/css") {
 html{background:black}
 /*This prevent custom backgroumd image interfering with images*/
 }
@@ -238,6 +255,8 @@ html{background:black}
 
 /*[[remv]]*/
 
+/*[[forum-banner]]*/
+
 table,
 img
 {
@@ -245,16 +264,20 @@ box-shadow: none
 }
 
 /*Buttons/Boxes Shadow*/
-.tablebg,
 .post,
 .btnbbcode,
 .helpline,
 .btnmain,
 input.btnlite
 {
-box-shadow: 1px 1px 4px /*[[elmsh]]*/
+box-shadow: 1px 1px 4px /*[[elmsh]]*/ 
+}
+.tablebg,.indentmenu
+{
+box-shadow: /*[[elmsht]]*/ /*[[elmsh]]*/
 }
 
+body,
 th,
 tr,
 .catdiv,
@@ -281,11 +304,13 @@ background: /*[[csc]]*/ !important
 }
 
 .quotetitle,
-.quotecontent
+.attachtitle,
+.quotecontent,
+.attachcontent
 {
 background: /*[[csb]]*/ !important;
 color: /*[[csa]]*/ !important;
-border-color: /*[[border]]*/
+border-color: /*[[1px]]*/ /*[[bds]]*/ /*[[border]]*/
 }
  
 b,
@@ -310,7 +335,7 @@ color: /*[[csa]]*/!important
 th,
 input
 {
-border: 1px /*[[bds]]*/ /*[[border]]*/ !important
+border: /*[[1px]]*/ /*[[bds]]*/ /*[[border]]*/ !important
 }
 th,
 .btnlite,
@@ -332,8 +357,13 @@ input.btnlite,
 .helpline,
 .post
 {
-text-shadow: 1px 1px 4px /*[[txtsh]]*/ ;
+text-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
 }
+textarea
+{
+background: /*[[readability]]*/!important
+}
+
 }
 
 @-moz-document url-prefix("http://e-shuushuu.net/wiki/") {
@@ -345,7 +375,7 @@ text-shadow: 1px 1px 4px /*[[txtsh]]*/ ;
 #gumax-nav ul li a
 {
 background-color: /*[[textcolor]]*/ ;
-border-bottom: 1px /*[[bds]]*/ /*[[border]]*/ ;
+border-bottom:  /*[[1px]]*/ /*[[bds]]*/ /*[[border]]*/ ;
 }
 #gumax-nav a.hover,
 #gumax-nav ul a.hover
@@ -363,15 +393,23 @@ table,
 fieldset#mw-searchoptions,
 #gumax-p-search form #searchInput,
 #gumax-p-search form #searchGoButton,
-#gumax-p-search form #mw-searchButton
-{
-border: 1px /*[[bds]]*/ /*[[border]]*/ !important
-}
+#gumax-p-search form #mw-searchButton,
+div#userloginForm form,
+input#mwProtect-reason,
+input#mwProtect-create-expires,
+input#wpLoginAttempt,
+input#wpMailmypassword,
+input#wpSave,
+input#wpDiff,
+input#wpPreview,
+input#wpSummary,
+input#mw-Protect-submit,
 div.mw-warning-with-logexcerpt
 {
-border:2px /*[[bds]]*/ /*[[border]]*/!important
+border:  /*[[1px]]*/ /*[[bds]]*/ /*[[border]]*/ !important
 }
 
+.errorbox,
 #gumax-page,
 #gumax-special-tools ul li a,
 #gumax-credit-list ul li a,
@@ -380,9 +418,7 @@ border:2px /*[[bds]]*/ /*[[border]]*/!important
 #gumax-nav,
 #pagehistory li,
 #gumax-footer,
-textarea,
 div.tooltip,
-div#content,
 td.gumax-content-td-center,
 td.gumax-content-td-topleft,
 td.gumax-content-td-topright,
@@ -393,10 +429,16 @@ form,
 tr,
 li,
 label,
-textarea#wpTextbox1,
 h4,
-input,
-.errorbox
+input#mwProtect-reason,
+input#mwProtect-create-expires,
+input#wpLoginAttempt,
+input#wpMailmypassword,
+input#wpSave,
+input#wpDiff,
+input#wpPreview,
+input#wpSummary,
+input#mw-Protect-submit
 {
 background: transparent !important;
 color: /*[[csa]]*/ !important;
@@ -406,7 +448,9 @@ color: /*[[csa]]*/ !important;
 .autocomment,
 .newpage,
 .minor,
-.bot
+.bot,
+input,
+textarea
 {
 color: /*[[csa]]*/ !important;
 }
@@ -427,9 +471,11 @@ a.external,
 color:/*[[textcolor]]*/
 }
 
+body,
 h2,
 h3,
 tbody tr,
+table,
 fieldset#mw-searchoptions,
 #preferences,
 #toc,
@@ -437,13 +483,20 @@ fieldset#mw-searchoptions,
 #gumax-content-actions ul li a,
 .mw-search-formheader,
 .catlinks,
-.prefsection legend
+.prefsection legend,
+div#content table
 {
 background:none!important
 }
 
-.wikitable th,
+/*readability*/
+textarea#wpTextbox1,input,#bodyContent{
+background: /*[[readability]]*/ !important
+}
+
 table,
+table.gumax-content-table,
+.wikitable th,
 #gumax-p-search form #searchGoButton,
 #gumax-p-search form #searchInput,
 #gumax-p-search form #mw-searchButton
@@ -456,7 +509,7 @@ background: /*[[csc]]*/ !important;
 #gumax-p-search form #mw-searchButton,
 #gumax-p-search form #searchInput
 {
-text-shadow: 1px 1px 4px /*[[txtsh]]*/ ;
+text-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
 color: /*[[csa]]*/
 }
 #gumax-p-search form #searchInput,
@@ -469,11 +522,12 @@ box-shadow: 1px 1px 4px /*[[elmsh]]*/
 #content
 {
 border: none;
-border-top: 1px /*[[bds]]*/ /*[[border]]*/;
-border-bottom: 1px /*[[bds]]*/ /*[[border]]*/;
+border-top:  /*[[1px]]*/ /*[[bds]]*/ /*[[border]]*/;
+border-bottom: /*[[1px]]*/ /*[[bds]]*/ /*[[border]]*/;
+color: /*[[csa]]*/ !important
 }
 
-/*Restoore the Origina text Color Scheme from Shuu Default CSS*/
+/*Restore the Origina text Color Scheme from Shuu Default CSS*/
 a:visited {
 color: #bd96ff;
 }
@@ -512,9 +566,8 @@ a.tab.tab-selected,
 {
 background: /*[[csc]]*/ !important;
 color: /*[[csa]]*/ !important;
-text-shadow: 1px 1px 4px /*[[txtsh]]*/ ;
+text-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
 }
 
 span.Xc7 a {color: /*[[textcolor]]*/ !important;}
-
 }
