@@ -1,10 +1,11 @@
 @-moz-document url-prefix("http://e-shuushuu.net/") {
 /*
 E-shuushuu Default Dark
-rev20160928
+rev20160930
 */
 /*[[font]]*/
 }
+
 @-moz-document url-prefix("http://e-shuushuu.net/") {
 html
 {
@@ -14,8 +15,6 @@ background-attachment:fixed;
 background-position:center;
 background-size:cover;
 }
-
-/*[[font]]*/
 
 /*[[carbon]]*//*[[tranf]]*/
 /*[[shuu-bnr]]*//*[[effect]]*/ /*[[app]]*/
