@@ -1,7 +1,7 @@
 @-moz-document url-prefix("http://e-shuushuu.net/") {
 /*
-E-shuushuu Default Dark
-rev20160930
+E-shuushuu Customizable CSS
+rev20161001
 */
 /*[[font]]*/
 }
@@ -505,17 +505,34 @@ background: /*[[csc]]*/ !important;
 
 #gumax-nav a,
 #gumax-p-search form #searchGoButton,
-#gumax-p-search form #mw-searchButton,
-#gumax-p-search form #searchInput
+#gumax-p-search form #searchInput,
+#gumax-p-search form #mw-searchButton
 {
 text-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
 color: /*[[csa]]*/
 }
-#gumax-p-search form #searchInput,
 #gumax-p-search form #searchGoButton,
+#gumax-p-search form #searchInput,
 #gumax-p-search form #mw-searchButton
 {
 box-shadow: 1px 1px 4px /*[[elmsh]]*/
+}
+
+input,
+input.historysubmit,
+input#mwProtect-reason,
+input#mwProtect-create-expires,
+input#wpLoginAttempt,
+input#wpMailmypassword,
+input#wpSave,
+input#wpDiff,
+input#wpPreview,
+input#wpSummary,
+input#mw-Protect-submit
+{
+text-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
+box-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
+border:  /*[[1px]]*/ /*[[bds]]*/ /*[[border]]*/ !important
 }
 
 #content
@@ -540,7 +557,7 @@ a.stub {
 color: #772233;
 }
 a.new, #p-personal a.new {
-color: #ff6600;
+color: red;
 }
 a.new:visited, #p-personal a.new:visited {
 color: #a55858;
@@ -548,10 +565,7 @@ color: #a55858;
 .mw-plusminus-pos {
 color: #00bf00;
 }
-#bodyContent a.external
-{
-color:#00aaff
-}  
+  
 }
 
 @-moz-document url-prefix("https://qchat.rizon.net/") {
