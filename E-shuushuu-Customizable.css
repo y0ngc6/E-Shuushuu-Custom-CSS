@@ -9,15 +9,48 @@ rev20161001
 @-moz-document url-prefix("http://e-shuushuu.net/") {
 html
 {
-background:url("/*[[bg]]*/");
-background-repeat:no-repeat;
-background-attachment:fixed;
-background-position:center;
-background-size:cover;
+position: relative;
+background: /*[[bgc]]*/ !important
 }
 
-/*[[carbon]]*//*[[tranf]]*/
-/*[[shuu-bnr]]*//*[[effect]]*/ /*[[app]]*/
+html:after
+{
+content : "";
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+background: url("/*[[bg]]*/");
+/*[[bgr]]*/
+background-attachment: fixed;
+background-position: center;
+width: 100%;
+height: 100%;
+opacity : /*[[bg-opacity]]*/ ;
+z-index: -1;
+}
+
+
+/*[[tranf]]*//*[[shuu-bnr]]*//*[[effect]]*/ /*[[app]]*/
+/*[[banner-img]]*/
+
+#banner:after {
+content : "";
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+background: url('/*[[bnr-img]]*/')!important;
+background-repeat:no-repeat;
+background-size:cover;
+background-attachment: fixed;
+background-position: center;
+width: 100%;
+height: 100%;
+opacity : /*[[bn-opacity]]*/ ;
+z-index: 0;
+}
+
 
 #head,#sidebar,#content
 {
@@ -90,7 +123,8 @@ table,
 .pagination .prev,
 .post blockquote,
 .post .spoiler,
-.pagination li
+.pagination li,
+form.norm input
 {
 border: /*[[1px]]*/ /*[[bds]]*//*[[border]]*/!important;
 }
@@ -143,11 +177,18 @@ text-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
 /*Hyperlink Text*/
 a:link,
 a:visited,
+.pagination,
+.display h2,
+#donations h2,
+form.norm h2,
 h1,
+h2,
 div.search_suggest_div ul,
-input.button
+input.button,
+form.norm input,
+#masstags_form dl
 {
-color: /*[[textcolor]]*/ ;
+color: /*[[textcolor]]*/ /*[[override]]*/ ;
 text-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
 }
 
@@ -165,6 +206,7 @@ text-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
 form.norm h2,
 form.norm h3,
 form.norm,
+form.norm input,
 dl.spoiler.hide,
 input.button,
 div#content table,
@@ -200,18 +242,21 @@ background: /*[[readability]]*/ !important;
 p,
 .display .title h2,
 .display .title h3,
+.display dl,
 .odd,
 .post .content,
 .post .spoiler,
 .post_foot,
-#banner
+.post .avatar,
+#banner,
+form.norm input
 {
-background:none!important;
+background:rgba(0,0,0,0) !important;
 }
 
 .display dl
 {
-border-left: 10em solid transparent;
+border-left: 10em solid transparent !important;
 }
 
 .thumbview .display
@@ -297,7 +342,8 @@ background:  none !important
 /*Background Color/transparency option on Forum*/
 .tablebg,
 .indentmenu ul,
-.post
+.post,
+.codecontent
 {
 background: /*[[csc]]*/ !important
 }
@@ -305,7 +351,8 @@ background: /*[[csc]]*/ !important
 .quotetitle,
 .attachtitle,
 .quotecontent,
-.attachcontent
+.attachcontent,
+.codetitle
 {
 background: /*[[csb]]*/ !important;
 color: /*[[csa]]*/ !important;
@@ -321,6 +368,7 @@ p.moderators,
 .post,
 .helpline,
 .btnbbcode,
+.codecontent,
 span.username-coloured
 {	
 color: /*[[csa]]*/!important
@@ -454,13 +502,12 @@ textarea
 color: /*[[csa]]*/ !important;
 }
 
-h1,
 h2,
 h3,
 th,
 li,
 a,
-a.external,
+#bodyContent a.external,
 #preftoc a,
 #gumax-p-login ul li a,
 #gumax-content-actions ul li a,
