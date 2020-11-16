@@ -1,70 +1,54 @@
-@-moz-document url-prefix("http://e-shuushuu.net/") {
+@-moz-document url-prefix("http://e-shuushuu.net/")
+{
 /*
 E-shuushuu Customizable CSS
-rev20161001
-*/
-/*[[font]]*/
-}
-
-@-moz-document url-prefix("http://e-shuushuu.net/") {
-html
-{
-position: relative;
-background: /*[[bgc]]*/ !important
-}
-
-html:after
-{
-content : "";
-display: block;
-position: absolute;
-top: 0;
-left: 0;
-background: url("/*[[bg]]*/");
+rev20191011-2338*/
+  html
+  {
+    background: /*[[bg-opacity]]*//*[[bgc]]*/url('/*[[bg]]*/') !important;
 /*[[bgr]]*/
-background-attachment: fixed;
-background-position: center;
-width: 100%;
-height: 100%;
-opacity : /*[[bg-opacity]]*/ ;
-z-index: -1;
-}
+    background-attachment: fixed!important;
+    background-position: center!important;
+  }
 
 
-/*[[tranf]]*//*[[shuu-bnr]]*//*[[effect]]*/ /*[[app]]*/
-/*[[banner-img]]*/
+/*[[tranf]]*/ /*[[shuu-bnr]]*/ /*[[app]]*/ /*[[effect]]*/
 
-#banner:after {
-content : "";
-display: block;
-position: absolute;
-top: 0;
-left: 0;
-background: url('/*[[bnr-img]]*/')!important;
-background-repeat:no-repeat;
-background-size:cover;
-background-attachment: fixed;
-background-position: center;
-width: 100%;
-height: 100%;
-opacity : /*[[bn-opacity]]*/ ;
+  #banner a
+  {
+    position: absolute;
+/*[[banner-img]]*/;
+  }
+
+  #banner:after
+  {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('/*[[bnr-img]]*/')!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: /*[[bn-opacity]]*/;
 z-index: 0;
+  }
 }
 
-
-#head,#sidebar,#content
+@-moz-document url-prefix("http://e-shuushuu.net/")
 {
-opacity: /*[[opacity]]*/ !important
-}
-
 /*Elements Shadow*/
-#donations .graph,
+  #donations .graph,
 select
-{
-box-shadow: 1px 1px 4px /*[[elmsh]]*/
-}
+  {
+    box-shadow: 1px 1px 4px /*[[elmsh]]*/;
+  }
 
-#head,
+  #head,
 #sorting_controls,
 #footer,
 .thumb img,
@@ -85,9 +69,8 @@ table,
 input.text,
 textarea,
 .notice
-{
-box-shadow: /*[[elmsht]]*/ /*[[elmsh]]*/
-}
+  {
+    box-shadow: /*[[elmsht]]*//*[[elmsh]]*/}
 
 /*Border Color*/
 header,
@@ -101,15 +84,15 @@ input.text,
 div.search_suggest_div ul
 {
 border: /*[[1px]]*/ /*[[bds]]*//*[[border]]*/!important;
-border-bottom: /*[[1px]]*/ /*[[bds]]*//*[[border]]*/!important;
-}
+    border-bottom: /*[[1px]]*//*[[bds]]*//*[[border]]*/!important;
+  }
 
-#top_info, #banner
-{
-border-bottom: /*[[1px]]*/ /*[[bds]]*//*[[border]]*/!important;
-}
+  #top_info, #banner
+  {
+    border-bottom: /*[[1px]]*//*[[bds]]*//*[[border]]*/!important;
+  }
 
-#donations .graph,
+  #donations .graph,
 select,
 textarea,
 input.button,
@@ -125,75 +108,82 @@ table,
 .post .spoiler,
 .pagination li,
 form.norm input
-{
-border: /*[[1px]]*/ /*[[bds]]*//*[[border]]*/!important;
-}
+  {
+    border: /*[[1px]]*//*[[bds]]*//*[[border]]*/!important;
+  }
 
-.post_foot
-{
-border-top: /*[[1px]]*/ /*[[bds]]*//*[[border]]*/!important;
-}
-.post .meta
-{
-border-top: /*[[1px]]*/ dashed /*[[border]]*/!important;
-}
-.post .avatar
-{
--moz-border-radius: 0px;
--webkit-border-radius: 0px;
-background: transparent;
-}
-.spoiler
-{
-background: rgba(128, 128, 128, 0.5)!important;
-}
-.alert
-{
-background :rgba(0,128,128,0.5)!important;
-}
-tbody tr
-{
-background: rgba(92,92,92,0.5);
-}
-select
-{
-background: /*[[select]]*/!important;
-}
+  .post_foot
+  {
+    border-top: /*[[1px]]*//*[[bds]]*//*[[border]]*/!important;
+  }
+
+  .post .meta
+  {
+    border-top: /*[[1px]]*/dashed /*[[border]]*/!important;
+  }
+
+  .post .avatar
+  {
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    background: transparent;
+  }
+
+  .spoiler
+  {
+    background: rgba(128, 128, 128, 0.5)!important;
+  }
+
+  .alert
+  {
+    background: rgba(0,128,128,0.5)!important;
+  }
+
+  tbody tr
+  {
+    background: rgba(92,92,92,0.5);
+  }
+
+  select
+  {
+    background: /*[[select]]*/!important;
+  }
 
 
 /*Plain Text*/
-p,
+  p,
 body,
 div.tooltip,
 input.text,
 select,
 textarea,
-.post .spoiler.show dd
-{
-color: /*[[csa]]*/!important;
-text-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
-}
+.post .spoiler.show dd,
+#query,.panel-container h3
+  {
+    color: /*[[csa]]*/!important;
+    text-shadow: 1px 1px 4px /*[[elmsh]]*/;
+  }
 
 /*Hyperlink Text*/
-a:link,
+  a:link,
 a:visited,
 .pagination,
 .display h2,
 #donations h2,
 form.norm h2,
+#content h1,
 h1,
 h2,
 div.search_suggest_div ul,
 input.button,
-form.norm input,
-#masstags_form dl
-{
-color: /*[[textcolor]]*/ /*[[override]]*/ ;
-text-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
-}
+form.norm input
+  {
+    color: /*[[textcolor]]*/!important;
+    text-shadow: 1px 1px 4px /*[[elmsh]]*/;
+  }
 
 /*Elements color*/
-#head,
+  #head,
 #sorting_controls,
 #footer,
 #donations .graph,
@@ -211,12 +201,12 @@ dl.spoiler.hide,
 input.button,
 div#content table,
 #masstags_form input.text
-{
-background: /*[[csc]]*/!important;
-}
+  {
+    background: /*[[csc]]*/!important;
+  }
 
 /*Title bar, form color*/
-#sidebar .display h2,
+  #sidebar .display h2,
 h3,
 form.norm h2,
 form.norm h3,
@@ -226,17 +216,17 @@ thead,
 .display h3,
 .title,
 .post blockquote
-{
-background: /*[[csb]]*/!important;
-}
+  {
+    background: /*[[csb]]*/!important;
+  }
 
 /*readability*/
-.image_block .meta,
+  .image_block .meta,
 input.text,
 textarea
-{
-background: /*[[readability]]*/ !important;
-}
+  {
+    background: /*[[readability]]*/!important;
+  }
 
 /*Elements' background below are disabled by default to achieve transparency effect*/
 p,
@@ -249,9 +239,11 @@ p,
 .post_foot,
 .post .avatar,
 #banner,
-form.norm input
+form.norm input,
+#masstags_form,
+.minitabs .tab > a
 {
-background:rgba(0,0,0,0) !important;
+background:transparent !important;
 }
 
 .display dl
@@ -290,14 +282,13 @@ color:/*[[reg_user]]*/!important;
 }
 }
 
-@-moz-document url-prefix("http://e-shuushuu.net/images/"), url-prefix("http://e-shuushuu.net/common/css") {
-html{background:black}
-/*This prevent custom backgroumd image interfering with images*/
+@-moz-document url-prefix("http://e-shuushuu.net/images/"), url-prefix("http://e-shuushuu.net/common/css"),url-prefix("http://e-shuushuu.net/images/deactivated")/*[[no-bg]]*/ {
+html{
+background:black!important;
+}/*This prevent custom backgroumd image interfering with images*/
 }
 
 @-moz-document url-prefix("http://e-shuushuu.net/forums/") {
-
-/*[[remv]]*/
 
 /*[[forum-banner]]*/
 
@@ -334,9 +325,35 @@ tr,
 .helpline,
 .btnbbcode,
 .btnmain,
-.btnfile
+.btnfile,
+.wrap,
+.navbar,
+.headerbar,
+ul.forums,
+.forabg,
+h3,
+.panel,
+.dropdown .dropdown-contents,
+.forumbg,
+.bg1,
+.bg2,
+.button,
+.tabs .activetab > a,
+.tabs .tab > a,
+.navigation .active-subsection a,
+.navigation a,
+.cp-mini,
+.dropdown-extended .header
 {
-background:  none !important
+background:  /*[[bgc]]*/ !important
+}
+
+.headerbar,
+.forabg,
+.button,
+.dropdown-extended .header
+{
+background-image :none !important;
 }
 
 /*Background Color/transparency option on Forum*/
@@ -369,7 +386,20 @@ p.moderators,
 .helpline,
 .btnbbcode,
 .codecontent,
-span.username-coloured
+span.username-coloured,
+.content,
+ul.topiclist li,
+label,
+.panel,
+dl.faq dt,
+table.table1 td,
+.postprofile strong,
+.postprofile,
+.postbody,
+dl.details dt,
+.panel-container .panel li.header dt,
+li.row strong,
+.dropdown-extended .header
 {	
 color: /*[[csa]]*/!important
 }
@@ -414,14 +444,13 @@ background: /*[[readability]]*/!important
 }
 
 @-moz-document url-prefix("http://e-shuushuu.net/wiki/") {
-/*[[remv]]*/
 
 /*[[wiki-img]]*/
 
 #gumax-nav li.hover a,
 #gumax-nav ul li a
 {
-background-color: /*[[textcolor]]*/ ;
+background-color: /*[[csb]]*/ ;
 border-bottom:  /*[[1px]]*/ /*[[bds]]*/ /*[[border]]*/ ;
 }
 #gumax-nav a.hover,
@@ -634,3 +663,7 @@ text-shadow: 1px 1px 4px /*[[elmsh]]*/ ;
 
 span.Xc7 a {color: /*[[textcolor]]*/ !important;}
 }
+
+@-moz-document url-prefix("http://e-shuushuu.net/") {
+/*[[font]]*/ /*[[css-trans]]*/
+/*[[effect]]*/ }
